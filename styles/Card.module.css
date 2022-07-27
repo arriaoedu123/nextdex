@@ -1,0 +1,45 @@
+.card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #23232e;
+  border-radius: 1rem;
+  border: 3px solid #e33d33;
+  box-shadow: 3px 3px 0px 0px #e33d33;
+  gap: 12px;
+}
+
+.id {
+  background-color: #e33d33;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.details {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 0 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.details:hover {
+  background-color: #e33d33;
+  color: #fff;
+}

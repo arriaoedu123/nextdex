@@ -1,0 +1,29 @@
+.title h2 {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.title h2 span {
+  color: #e33d33;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contentContainer {
+  width: 90%;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* @media only screen and (min-width: 1150px) {
+  .contentContainer {
+    width: 1000px;
+  }
+} */
