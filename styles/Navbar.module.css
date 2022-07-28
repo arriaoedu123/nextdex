@@ -1,51 +1,57 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #23232e;
-    height: 60px;
-    padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #23232e;
+  height: 60px;
+  padding: 0 40px;
 }
 
 .navbar ul {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar ul li {
-    list-style: none;
-    color: #fff;
+  list-style: none;
+  color: #fff;
 }
 
 .logo {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .logoName span {
-    color: #e33d33;
+  color: #e33d33;
 }
 
 .links li {
-    transition: .2s;
+  transition: 0.2s;
 }
 
 .links li:not(:last-child) {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .links li a {
-    transition: .2s;
+  transition: 0.2s;
 }
 
 .links li a:hover {
-    color: #e33d33;
+  color: #e33d33;
 }
 
 .links li > a:hover {
-    border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .navbar ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar {
+    padding: 0 20px;
+  }
 }

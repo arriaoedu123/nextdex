@@ -29,6 +29,7 @@
 }
 
 .details {
+  text-decoration: none;
   background-color: #fff;
   color: #000;
   border-radius: 5px;
@@ -42,4 +43,26 @@
 .details:hover {
   background-color: #e33d33;
   color: #fff;
+}
+
+@media only screen and (max-width: 425px) {
+  .card {
+    width: 190px;
+    height: 270px;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  .card {
+    width: 170px;
+    gap: 8px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card {
+    width: 148px;
+    height: 255px;
+    gap: 6px;
+  }
 }
