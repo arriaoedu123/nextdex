@@ -22,6 +22,30 @@
   gap: 1rem;
 }
 
+.generationsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0 0;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.generationsButtons button {
+  border: none;
+  color: #fff;
+  background-color: #e33d33;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.generationsButtons button:hover {
+  background-color: #b02a37;
+}
+
 @media only screen and (max-width: 490px) {
   .title h2 {
     font-size: 1.2rem;
@@ -40,6 +64,6 @@
 
 @media only screen and (max-width: 360px) {
   .title h2 {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 }

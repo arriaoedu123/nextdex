@@ -7,7 +7,9 @@ export default function Card({ pokemon }) {
   return (
     <div className={styles.card}>
       <Image
-        src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+        src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
+          .toString()
+          .padStart(3, "0")}.png`}
         width={120}
         height={120}
         alt={pokemon.name}

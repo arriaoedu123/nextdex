@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../../styles/Pokemon.module.css";
 
 export async function getStaticPaths() {
-  const maxPokemons = 151;
+  const maxPokemons = 905;
   const api = "https://pokeapi.co/api/v2/pokemon/";
 
   const res = await fetch(`${api}/?limit=${maxPokemons}`);
@@ -45,7 +45,9 @@ export default function Pokemon({ pokemon }) {
       </Link>
       <h2 className={styles.name}>{pokemon.name}</h2>
       <Image
-        src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+        src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
+          .toString()
+          .padStart(3, "0")}.png`}
         width={200}
         height={200}
         alt={pokemon.name}

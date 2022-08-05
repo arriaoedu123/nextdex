@@ -6,11 +6,15 @@ export default function About() {
     <div className={styles.about}>
       <h1>Sobre o projeto</h1>
       <p>
-        Esse projeto foi feito para aprender a usar Next.js. Caso queira ver o
-        código desse projeto,{" "}
+        Esse projeto foi feito com a{" "}
+        <a href="https://pokeapi.co/" target="_blank">
+          PokéAPI
+        </a>{" "}
+        para aprender a usar Next.js. Caso queira ver o código desse projeto,{" "}
         <a href="https://github.com/arriaoedu123/nextdex" target="_blank">
           clique aqui
         </a>
+        .
       </p>
       <Image
         src="/images/charizard.png"
