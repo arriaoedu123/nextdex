@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -19,6 +21,11 @@
 
 .logo {
   margin-right: 1rem;
+}
+
+.logoName h1,
+.logoName span {
+  font-family: "Press Start 2P", sans-serif;
 }
 
 .logoName span {
@@ -50,8 +57,22 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 425px) {
+  .logoName h1,
+  .logoName span {
+    font-size: 18px;
+  }
+}
+
 @media only screen and (max-width: 375px) {
   .navbar {
     padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .logoName h1,
+  .logoName span {
+    font-size: 16px;
   }
 }

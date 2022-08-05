@@ -36,13 +36,16 @@
   border: none;
   color: #fff;
   background-color: #e33d33;
+  font-size: 16px;
+  width: 112px;
   padding: 5px 10px;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.generationsButtons button:hover {
+.generationsButtons button:hover,
+.generationsButtons button:focus {
   background-color: #b02a37;
 }
 
@@ -59,6 +62,11 @@
 @media only screen and (max-width: 375px) {
   .title h2 {
     font-size: 1.1rem;
+  }
+
+  .generationsButtons button {
+    font-size: 14px;
+    width: 105px;
   }
 }
 

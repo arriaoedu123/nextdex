@@ -17,11 +17,11 @@
   background-color: #e33d33;
   padding: 5px 10px;
   border-radius: 0.5rem;
-  transition: 0.2s;
 }
 
 .back:hover {
   background-color: #b02a37;
+  transition: 0.2s;
 }
 
 .name {
@@ -36,10 +36,31 @@
   color: #fff;
 }
 
+.pokeInfos {
+  display: flex;
+  gap: 24px;
+}
+
 .typesContainer {
   display: flex;
   gap: 12px;
   margin-top: 5px;
+}
+
+.statsContainer button {
+  color: #fff;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  background-color: #23232e;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.statsContainer button:hover {
+  background-color: #3e3e52;
+  transition: 0.2s;
 }
 
 .type {
