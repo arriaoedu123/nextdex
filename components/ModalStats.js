@@ -1,21 +1,12 @@
 import styles from "../styles/ModalStats.module.css";
 import { useEffect } from "react";
 
-export default function ModalStats({ pokemon, closeModal, isOpen, ...props }) {
-  useEffect(() => {
-    !props.scroll &&
-      (document.body.style.overflow = isOpen ? "hidden" : "auto");
-    return () => {
-      !props.scroll && (document.body.style.overflow = "auto");
-    };
-  }, [isOpen]);
+import Modal from "../components/Modal";
 
+export default function ModalStats({ pokemon, closeModal, isOpen, setIsOpen }) {
   return (
-    <div className={styles.modal}>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className={styles.modalContent}>
-        <button onClick={closeModal} className={styles.close}>
-          +
-        </button>
         <div className={styles.statsContent}>
           <h2>{pokemon.name}</h2>
           <div>
@@ -44,6 +35,6 @@ export default function ModalStats({ pokemon, closeModal, isOpen, ...props }) {
           </div>
         </div>
       </div>
-    </div>
+    </Modal>
   );
 }

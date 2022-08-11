@@ -1,5 +1,6 @@
-import Card from "../components/Card";
 import { useState } from "react";
+import Card from "../components/Card";
+import Modal from "../components/Modal";
 
 import styles from "../styles/Home.module.css";
 
@@ -24,6 +25,18 @@ export async function getStaticProps() {
 export default function Home({ pokemons }) {
   const [data, setData] = useState(pokemons);
   const [title, setTitle] = useState("Primeira geração de Pokémon ( 1 - 151 )");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const gen = [
+    "Primeira geração de Pokémon ( 1 - 151 )",
+    "Segunda geração de Pokémon ( 152 - 251 )",
+    "Terceira geração de Pokémon ( 252 - 386 )",
+    "Quarta geração de Pokémon ( 387 - 493 )",
+    "Quinta geração de Pokémon ( 494 - 649 )",
+    "Sexta geração de Pokémon ( 650 - 721 )",
+    "Sétima geração de Pokémon ( 722 - 809 )",
+    "Oitava geração de Pokémon ( 810 - 905 )",
+  ];
 
   const fetchData = async (offset, limit, title) => {
     const res = await fetch(
@@ -35,7 +48,7 @@ export default function Home({ pokemons }) {
       item.id = index + (offset + 1);
     });
 
-    return setData(newData.results), setTitle(title);
+    return setData(newData.results), setTitle(title), setIsOpen(false);
   };
 
   const handleClick = (event, a, b, c) => {
@@ -43,87 +56,49 @@ export default function Home({ pokemons }) {
     fetchData(a, b, c);
   };
 
+  const handleOpen = (e) => {
+    e.preventDefault();
+    setIsOpen(true);
+  };
+
   return (
     <>
       <div className={styles.title}>
-        <div className={styles.generationsButtons}>
-          <button
-            onClick={(e) =>
-              handleClick(e, 0, 151, "Primeira geração de Pokémon ( 1 - 151 )")
-            }
-          >
-            1ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(
-                e,
-                151,
-                100,
-                "Segunda geração de Pokémon ( 152 - 251 )"
-              )
-            }
-          >
-            2ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(
-                e,
-                251,
-                135,
-                "Terceira geração de Pokémon ( 252 - 386 )"
-              )
-            }
-          >
-            3ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(
-                e,
-                386,
-                107,
-                "Quarta geração de Pokémon ( 387 - 493 )"
-              )
-            }
-          >
-            4ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(
-                e,
-                493,
-                156,
-                "Quinta geração de Pokémon ( 494 - 649 )"
-              )
-            }
-          >
-            5ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(e, 649, 72, "Sexta geração de Pokémon ( 650 - 721 )")
-            }
-          >
-            6ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(e, 721, 88, "Sétima geração de Pokémon ( 722 - 809 )")
-            }
-          >
-            7ª Geração
-          </button>
-          <button
-            onClick={(e) =>
-              handleClick(e, 809, 96, "Oitava geração de Pokémon ( 810 - 905 )")
-            }
-          >
-            8ª Geração
-          </button>
-        </div>
+        <button onClick={handleOpen} className={"blackButton"}>
+          Mudar geração
+        </button>
+        <Modal
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          modalTitle={"Escolha a geração"}
+        >
+          <div className={styles.generationsButtons}>
+            <button onClick={(e) => handleClick(e, 0, 151, gen[0])}>
+              1ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 151, 100, gen[1])}>
+              2ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 251, 135, gen[2])}>
+              3ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 386, 107, gen[3])}>
+              4ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 493, 156, gen[4])}>
+              5ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 649, 72, gen[5])}>
+              6ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 721, 88, gen[6])}>
+              7ª Geração
+            </button>
+            <button onClick={(e) => handleClick(e, 809, 96, gen[7])}>
+              8ª Geração
+            </button>
+          </div>
+        </Modal>
         <h2>{title}</h2>
       </div>
       <section className={styles.content}>

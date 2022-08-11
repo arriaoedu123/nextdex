@@ -1,28 +1,10 @@
-.modal {
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  box-sizing: border-box;
-  animation: fadein 0.2s;
-}
-
 .modalContent {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   width: 450px;
   height: 500px;
-  background-color: #f8f9fa;
-  border-radius: 1rem;
 }
 
 .statsContent {
@@ -53,24 +35,6 @@
   font-size: 20px;
 }
 
-.close {
-  position: absolute;
-  top: 0;
-  right: 0.5rem;
-  font-family: "Arial", sans-serif;
-  color: #e33d33;
-  border: none;
-  background-color: transparent;
-  font-size: 32px;
-  cursor: pointer;
-  transform: rotate(45deg);
-}
-
-.close:hover {
-  transform: rotate(135deg);
-  transition: 0.2s;
-}
-
 @media only screen and (max-width: 600px) {
   .modalContent {
     width: 320px;
@@ -80,17 +44,9 @@
     width: 80%;
   }
 }
+
 @media only screen and (max-width: 400px) {
   .modalContent {
     width: 300px;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

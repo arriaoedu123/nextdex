@@ -55,15 +55,10 @@ export default function Pokemon({ pokemon }) {
     setIsOpen(true);
   };
 
-  const handleClose = (e) => {
-    e.preventDefault();
-    setIsOpen(false);
-  };
-
   return (
     <div className={styles.contentContainer}>
       <Link href="/">
-        <a className={styles.back}>Voltar</a>
+        <a className={`redButton ${styles.back}`}>Voltar</a>
       </Link>
       <h2 className={styles.name}>{pokemon.name}</h2>
       <Image
@@ -94,16 +89,12 @@ export default function Pokemon({ pokemon }) {
         </div>
         <div className={styles.statsContainer}>
           <h2>Status</h2>
-          <button onClick={handleClick}>Mostrar</button>
+          <button onClick={handleClick} className={"blackButton"}>
+            Mostrar
+          </button>
         </div>
       </div>
-      {isOpen ? (
-        <ModalStats
-          pokemon={pokemon}
-          closeModal={handleClose}
-          isOpen={isOpen}
-        />
-      ) : null}
+      <ModalStats pokemon={pokemon} setIsOpen={setIsOpen} isOpen={isOpen} />
       <div className={styles.dataContainer}>
         <div className={styles.height}>
           <h2>Altura</h2>
@@ -113,6 +104,13 @@ export default function Pokemon({ pokemon }) {
           <h2>Peso</h2>
           <p>{pokemon.weight / 10} kg</p>
         </div>
+      </div>
+      <div className={styles.learnMore}>
+        <Link href={`https://www.pokemon.com/br/pokedex/${pokemon.id}`}>
+          <a className={"linkButton"} target="_blank">
+            Saber mais
+          </a>
+        </Link>
       </div>
     </div>
   );
