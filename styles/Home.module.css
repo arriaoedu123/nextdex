@@ -47,8 +47,8 @@
   border: none;
   color: #fff;
   background-color: #e33d33;
-  font-size: 16px;
-  width: 112px;
+  font-size: 18px;
+  width: 124px;
   padding: 5px 10px;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -57,8 +57,7 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.generationsButtons button:hover,
-.generationsButtons button:focus {
+.generationsButtons button:hover {
   background-color: #b02a37;
 }
 
@@ -78,8 +77,8 @@
   }
 
   .generationsButtons button {
-    font-size: 14px;
-    width: 105px;
+    font-size: 16px;
+    width: 112px;
   }
 }
 

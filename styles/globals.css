@@ -11,6 +11,16 @@ body {
   background-color: #f8f9fa;
 }
 
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  max-width: 1600px;
+}
+
 ::-webkit-scrollbar-track {
   width: 12px;
 }
@@ -40,7 +50,7 @@ a {
 .redButton,
 .linkButton {
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   padding: 5px 10px;
   border-radius: 0.5rem;
   margin-top: 5px;
@@ -84,6 +94,6 @@ a {
 @media only screen and (max-width: 375px) {
   .blackButton,
   .redButton {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

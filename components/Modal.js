@@ -7,6 +7,7 @@ export default function Modal({
   setIsOpen,
   isOpen,
   modalTitle,
+  transparent,
   children,
   ...props
 }) {
@@ -26,8 +27,15 @@ export default function Modal({
   return !isOpen
     ? null
     : createPortal(
-        <div className={styles.modal}>
-          <div className={styles.modalContent}>
+        <div className={styles.modal} onClick={() => setIsOpen(false)}>
+          <div
+            className={
+              transparent ? styles.modalContentTransparent : styles.modalContent
+            }
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+          >
             <button onClick={handleClose} className={styles.close}>
               +
             </button>

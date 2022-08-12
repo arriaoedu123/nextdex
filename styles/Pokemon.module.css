@@ -10,7 +10,7 @@
 
 .back {
   position: absolute;
-  top: calc(60px + 20px);
+  top: calc(60px + 15px);
   left: 20px;
 }
 
@@ -28,6 +28,14 @@
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+.image {
+  cursor: zoom-in;
+}
+
+.imageModalImg {
+  pointer-events: none;
+}
+
 .pokeInfos {
   display: flex;
   gap: 24px;
@@ -42,6 +50,7 @@
 .type {
   text-transform: capitalize;
   color: #fff;
+  font-size: 18px;
   padding: 5px 10px;
   border-radius: 0.5rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
@@ -116,7 +125,7 @@
   background-color: #4592c4;
 }
 
-.type_eletric {
+.type_electric {
   background-color: #eed535;
 }
 
@@ -140,12 +149,22 @@
 @media only screen and (max-width: 600px) {
   .contentContainer {
     height: auto;
-    padding: 80px 0 20px 0;
+    padding: 80px 20px 20px;
+  }
+
+  .name {
+    font-size: 2rem;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .type {
-    font-size: 14px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 327px) {
+  .name {
+    font-size: 1.8rem;
   }
 }

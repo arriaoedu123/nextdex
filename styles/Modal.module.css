@@ -21,6 +21,11 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.modalContentTransparent {
+  max-width: 95%;
+  position: relative;
+}
+
 .modalTitle {
   display: flex;
   justify-content: center;
@@ -34,12 +39,14 @@
   border-radius: 1rem;
   background-color: #23232e;
   color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .close {
   position: absolute;
   top: 0;
-  right: 0.5rem;
+  right: 8px;
   font-family: "Arial", sans-serif;
   color: #23232e;
   border: none;
@@ -47,11 +54,22 @@
   font-size: 32px;
   cursor: pointer;
   transform: rotate(45deg);
+  z-index: 1000;
+}
+
+.modalContentTransparent .close {
+  color: #fff;
 }
 
 .close:hover {
   transform: rotate(135deg);
   transition: 0.2s;
+}
+
+@media only screen and (max-width: 375px) {
+  .modalTitle h2 {
+    font-size: 20px;
+  }
 }
 
 @keyframes fadein {

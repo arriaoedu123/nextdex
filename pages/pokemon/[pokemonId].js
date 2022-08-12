@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Modal from "../../components/Modal";
 import ModalStats from "../../components/ModalStats";
 import Loading from "../../components/Loading";
 
@@ -44,6 +45,7 @@ export async function getStaticProps(context) {
 
 export default function Pokemon({ pokemon }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const router = useRouter();
 
   if (router.isFallback) {
@@ -53,6 +55,11 @@ export default function Pokemon({ pokemon }) {
   const handleClick = (e) => {
     e.preventDefault();
     setIsOpen(true);
+  };
+
+  const handleImageClose = (e) => {
+    e.preventDefault();
+    setIsImageOpen(true);
   };
 
   return (
@@ -68,7 +75,27 @@ export default function Pokemon({ pokemon }) {
         width={200}
         height={200}
         alt={pokemon.name}
+        className={styles.image}
+        onClick={() => setIsImageOpen(true)}
       />
+      <Modal
+        isOpen={isImageOpen}
+        setIsOpen={setIsImageOpen}
+        closeModal={handleImageClose}
+        transparent={true}
+      >
+        <div className={styles.imageModal}>
+          <Image
+            src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
+              .toString()
+              .padStart(3, "0")}.png`}
+            width={600}
+            height={600}
+            alt={pokemon.name}
+            className={styles.imageModalImg}
+          />
+        </div>
+      </Modal>
       <div>
         <h2>ID</h2>
         <p>#{pokemon.id}</p>
