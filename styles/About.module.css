@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 120px);
 }
 
 .about h1 {
@@ -12,7 +12,7 @@
 
 .about p {
   margin-bottom: 2rem;
-  max-width: 90%;
+  text-align: center;
 }
 
 .about p a {

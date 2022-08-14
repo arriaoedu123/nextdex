@@ -19,6 +19,11 @@
   color: #fff;
 }
 
+.logoLink {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   margin-right: 1rem;
 }

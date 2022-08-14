@@ -57,11 +57,6 @@ export default function Pokemon({ pokemon }) {
     setIsOpen(true);
   };
 
-  const handleImageClose = (e) => {
-    e.preventDefault();
-    setIsImageOpen(true);
-  };
-
   return (
     <div className={styles.contentContainer}>
       <Link href="/">
@@ -78,21 +73,15 @@ export default function Pokemon({ pokemon }) {
         className={styles.image}
         onClick={() => setIsImageOpen(true)}
       />
-      <Modal
-        isOpen={isImageOpen}
-        setIsOpen={setIsImageOpen}
-        closeModal={handleImageClose}
-        transparent={true}
-      >
+      <Modal isOpen={isImageOpen} setIsOpen={setIsImageOpen} transparent={true}>
         <div className={styles.imageModal}>
           <Image
             src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
               .toString()
               .padStart(3, "0")}.png`}
-            width={600}
-            height={600}
+            width={500}
+            height={500}
             alt={pokemon.name}
-            className={styles.imageModalImg}
           />
         </div>
       </Modal>
@@ -125,7 +114,11 @@ export default function Pokemon({ pokemon }) {
       <div className={styles.dataContainer}>
         <div className={styles.height}>
           <h2>Altura</h2>
-          <p>{pokemon.height * 10} cm</p>
+          <p>
+            {pokemon.height * 10 >= 100
+              ? `${pokemon.height / 10} m`
+              : `${pokemon.height * 10} cm`}
+          </p>
         </div>
         <div className={styles.weight}>
           <h2>Peso</h2>

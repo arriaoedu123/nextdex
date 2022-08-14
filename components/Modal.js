@@ -1,9 +1,9 @@
-import styles from "../styles/Modal.module.css";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
+import styles from "../styles/Modal.module.css";
+
 export default function Modal({
-  closeModal,
   setIsOpen,
   isOpen,
   modalTitle,

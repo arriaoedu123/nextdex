@@ -1,9 +1,8 @@
-import styles from "../styles/ModalStats.module.css";
-import { useEffect } from "react";
-
 import Modal from "../components/Modal";
 
-export default function ModalStats({ pokemon, closeModal, isOpen, setIsOpen }) {
+import styles from "../styles/ModalStats.module.css";
+
+export default function ModalStats({ pokemon, isOpen, setIsOpen }) {
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className={styles.modalContent}>
