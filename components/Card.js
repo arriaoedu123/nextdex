@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Button from "../components/Button";
 
 import styles from "../styles/Card.module.css";
 
@@ -16,9 +16,9 @@ export default function Card({ pokemon }) {
       />
       <p className={styles.id}>#{pokemon.id}</p>
       <p className={styles.name}>{pokemon.name}</p>
-      <Link href={`/pokemon/${pokemon.id}`}>
-        <a className={styles.details}>Detalhes</a>
-      </Link>
+      <Button variant="redLinkButtonText" href={`/pokemon/${pokemon.id}`}>
+        Detalhes
+      </Button>
     </div>
   );
 }

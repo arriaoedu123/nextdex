@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Card from "../components/Card";
 import Modal from "../components/Modal";
+import Button from "../components/Button";
 
 import styles from "../styles/Home.module.css";
 
@@ -64,39 +65,63 @@ export default function Home({ pokemons }) {
   return (
     <>
       <div className={styles.title}>
-        <button onClick={handleOpen} className={"blackButton"}>
+        <Button variant="blackButton" onClick={handleOpen}>
           Mudar geração
-        </button>
+        </Button>
         <Modal
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           modalTitle={"Escolha a geração"}
         >
           <div className={styles.generationsButtons}>
-            <button onClick={(e) => handleClick(e, 0, 151, gen[0])}>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 0, 151, gen[0])}
+            >
               1ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 151, 100, gen[1])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 151, 100, gen[1])}
+            >
               2ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 251, 135, gen[2])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 251, 135, gen[2])}
+            >
               3ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 386, 107, gen[3])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 386, 107, gen[3])}
+            >
               4ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 493, 156, gen[4])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 493, 156, gen[4])}
+            >
               5ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 649, 72, gen[5])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 649, 72, gen[5])}
+            >
               6ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 721, 88, gen[6])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 721, 88, gen[6])}
+            >
               7ª Geração
-            </button>
-            <button onClick={(e) => handleClick(e, 809, 96, gen[7])}>
+            </Button>
+            <Button
+              variant="redButton"
+              onClick={(e) => handleClick(e, 809, 96, gen[7])}
+            >
               8ª Geração
-            </button>
+            </Button>
           </div>
         </Modal>
         <h2>{title}</h2>

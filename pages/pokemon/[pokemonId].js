@@ -3,6 +3,7 @@ import Link from "next/link";
 import Modal from "../../components/Modal";
 import ModalStats from "../../components/ModalStats";
 import Loading from "../../components/Loading";
+import Button from "../../components/Button";
 
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -59,9 +60,9 @@ export default function Pokemon({ pokemon }) {
 
   return (
     <div className={styles.contentContainer}>
-      <Link href="/">
-        <a className={`redButton ${styles.back}`}>Voltar</a>
-      </Link>
+      <Button variant="redLinkButton" className={styles.back} href="/">
+        Voltar
+      </Button>
       <h2 className={styles.name}>{pokemon.name}</h2>
       <Image
         src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
@@ -105,9 +106,9 @@ export default function Pokemon({ pokemon }) {
         </div>
         <div className={styles.statsContainer}>
           <h2>Status</h2>
-          <button onClick={handleClick} className={"blackButton"}>
+          <Button variant="blackButtonText" onClick={handleClick}>
             Mostrar
-          </button>
+          </Button>
         </div>
       </div>
       <ModalStats pokemon={pokemon} setIsOpen={setIsOpen} isOpen={isOpen} />
@@ -125,12 +126,14 @@ export default function Pokemon({ pokemon }) {
           <p>{pokemon.weight / 10} kg</p>
         </div>
       </div>
-      <div className={styles.learnMore}>
-        <Link href={`https://www.pokemon.com/br/pokedex/${pokemon.id}`}>
-          <a className={"linkButton"} target="_blank">
-            Saber mais
-          </a>
-        </Link>
+      <div>
+        <Button
+          variant="linkButton"
+          href={`https://www.pokemon.com/br/pokedex/${pokemon.id}`}
+          target="_blank"
+        >
+          Saber mais
+        </Button>
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ body {
 
 .mainContent {
   max-width: 1600px;
+  padding: 20px 0;
 }
 
 ::-webkit-scrollbar-track {
@@ -48,48 +49,12 @@ a {
   text-decoration: none;
 }
 
-.blackButton,
-.redButton,
-.linkButton {
-  color: #fff;
-  font-size: 18px;
-  padding: 5px 10px;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+a {
+  color: inherit;
 }
 
-.blackButton {
-  background-color: #23232e;
-}
-
-.redButton {
-  background-color: #e33d33;
-}
-
-.linkButton {
-  background-color: #17a2b8;
-}
-
-.blackButton:hover,
-.redButton:hover,
-.linkButton:hover {
-  transition: 0.2s;
-}
-
-.blackButton:hover {
-  background-color: #3e3e52;
-}
-
-.redButton:hover {
-  background-color: #b02a37;
-}
-
-.linkButton:hover {
-  background-color: #138496;
+.react-ripples {
+  border-radius: 4px;
 }
 
 @media only screen and (max-width: 375px) {

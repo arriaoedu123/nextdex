@@ -2,30 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.title button {
-  margin: 2rem 0;
+  gap: 20px;
 }
 
 .title h2 {
   text-align: center;
-  margin: 0 0 2rem;
-}
-
-.title h2 span {
-  color: #e33d33;
 }
 
 .content {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .contentContainer {
   width: 90%;
-  padding-bottom: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -37,28 +29,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 2rem 0 1rem;
-  padding: 1rem;
+  margin-top: 2rem;
   gap: 5px;
   flex-wrap: wrap;
-}
-
-.generationsButtons button {
-  border: none;
-  color: #fff;
-  background-color: #e33d33;
-  font-size: 18px;
-  width: 124px;
-  padding: 5px 10px;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: 0.2s;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.generationsButtons button:hover {
-  background-color: #b02a37;
 }
 
 @media only screen and (max-width: 490px) {
@@ -68,12 +41,5 @@
 
   .contentContainer {
     width: 98%;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .generationsButtons button {
-    font-size: 16px;
-    width: 112px;
   }
 }
