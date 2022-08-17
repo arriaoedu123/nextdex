@@ -48,6 +48,7 @@
 .type {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-transform: capitalize;
   color: #fff;
   font-size: 18px;
