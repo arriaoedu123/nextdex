@@ -16,10 +16,14 @@ export default function Button({
       return (
         <Ripples
           className={
-            className ? `${styles.redButton} ${className}` : styles.redButton
+            className
+              ? `${styles.buttonRipple} ${className}`
+              : styles.buttonRipple
           }
         >
-          <button onClick={onClick}>{children}</button>
+          <button className={styles.redButton} onClick={onClick}>
+            {children}
+          </button>
         </Ripples>
       );
     } else if (variant === "redButtonText") {
@@ -27,11 +31,13 @@ export default function Button({
         <Ripples
           className={
             className
-              ? `${styles.redButtonText} ${className}`
-              : styles.redButtonText
+              ? `${styles.buttonTextRipple} ${className}`
+              : styles.buttonTextRipple
           }
         >
-          <button onClick={onClick}>{children}</button>
+          <button className={styles.redButtonText} onClick={onClick}>
+            {children}
+          </button>
         </Ripples>
       );
     } else if (variant === "blackButton") {
@@ -39,36 +45,36 @@ export default function Button({
         <Ripples
           className={
             className
-              ? `${styles.blackButton} ${className}`
-              : styles.blackButton
+              ? `${styles.buttonRipple} ${className}`
+              : styles.buttonRipple
           }
           color="#ffffff40"
           during={600}
         >
-          <button onClick={onClick}>{children}</button>
+          <button className={styles.blackButton} onClick={onClick}>
+            {children}
+          </button>
         </Ripples>
       );
     } else if (variant === "blackButtonText") {
       return (
-        <Ripples
-          className={
-            className
-              ? `${styles.blackButtonText} ${className}`
-              : styles.blackButtonText
-          }
-        >
-          <button onClick={onClick}>{children}</button>
+        <Ripples className={className}>
+          <button className={styles.blackButtonText} onClick={onClick}>
+            {children}
+          </button>
         </Ripples>
       );
     } else if (variant === "redLinkButton") {
       return (
         <Ripples
           className={
-            className ? `${styles.redButton} ${className}` : styles.redButton
+            className
+              ? `${styles.buttonRipple} ${className}`
+              : styles.buttonRipple
           }
         >
           <Link href={href}>
-            <a onClick={onClick} target={target}>
+            <a className={styles.redButton} onClick={onClick} target={target}>
               {children}
             </a>
           </Link>
@@ -76,15 +82,13 @@ export default function Button({
       );
     } else if (variant === "redLinkButtonText") {
       return (
-        <Ripples
-          className={
-            className
-              ? `${styles.redButtonText} ${className}`
-              : styles.redButtonText
-          }
-        >
+        <Ripples className={className}>
           <Link href={href}>
-            <a onClick={onClick} target={target}>
+            <a
+              className={styles.redButtonText}
+              onClick={onClick}
+              target={target}
+            >
               {children}
             </a>
           </Link>
@@ -94,11 +98,13 @@ export default function Button({
       return (
         <Ripples
           className={
-            className ? `${styles.linkButton} ${className}` : styles.linkButton
+            className
+              ? `${styles.buttonRipple} ${className}`
+              : styles.buttonRipple
           }
         >
           <Link href={href}>
-            <a onClick={onClick} target={target}>
+            <a className={styles.linkButton} onClick={onClick} target={target}>
               {children}
             </a>
           </Link>
@@ -106,15 +112,13 @@ export default function Button({
       );
     } else if (variant === "linkButtonText") {
       return (
-        <Ripples
-          className={
-            className
-              ? `${styles.linkButtonText} ${className}`
-              : styles.linkButtonText
-          }
-        >
+        <Ripples className={className}>
           <Link href={href}>
-            <a onClick={onClick} target={target}>
+            <a
+              className={styles.linkButtonText}
+              onClick={onClick}
+              target={target}
+            >
               {children}
             </a>
           </Link>

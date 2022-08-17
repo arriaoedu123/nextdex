@@ -7,11 +7,12 @@
   background-color: #23232e;
   height: 60px;
   padding: 0 40px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
 }
 
 .navbar ul {
   display: flex;
-  align-items: center;
+  height: 100%;
 }
 
 .navbar ul li {
@@ -39,25 +40,55 @@
 
 .links li {
   transition: 0.2s;
+  height: 100%;
+  display: flex;
+  position: relative;
 }
 
 .links li:not(:last-child) {
   margin-right: 1rem;
 }
 
+.navActive {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+}
+
+.navDisabled {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 4px;
+  background-color: #9e9e9e;
+}
+
 .links li a {
-  transition: 0.2s;
   font-size: 18px;
-}
-
-.links li > a:hover {
-  border-top: 2px solid #e33d33;
-  border-bottom: 2px solid #fff;
-}
-
-.navbar ul li a {
+  line-height: 60px;
   color: #fff;
   text-decoration: none;
+}
+
+.links li a:hover {
+  transition: 0.25s color;
+  color: #9e9e9e;
+}
+
+.links li a:hover ~ .navActive {
+  transition: 0.25 background-color;
+  background-color: #9e9e9e;
+}
+
+.links li a:hover ~ .navDisabled {
+  transition: 0.25s opacity, 0.25s visibility;
+  opacity: 1;
+  visibility: visible;
 }
 
 @media only screen and (max-width: 425px) {

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
+import Input from "../components/Input";
 
 import styles from "../styles/Home.module.css";
 
@@ -27,6 +28,7 @@ export default function Home({ pokemons }) {
   const [data, setData] = useState(pokemons);
   const [title, setTitle] = useState("Primeira geração de Pokémon ( 1 - 151 )");
   const [isOpen, setIsOpen] = useState(false);
+  const [search, setSearch] = useState("");
 
   const gen = [
     "Primeira geração de Pokémon ( 1 - 151 )",
@@ -62,12 +64,25 @@ export default function Home({ pokemons }) {
     setIsOpen(true);
   };
 
+  const filteredData =
+    search.length > 0
+      ? data.filter((item) => item.name.includes(search.toLowerCase()))
+      : [];
+
   return (
     <>
       <div className={styles.title}>
-        <Button variant="blackButton" onClick={handleOpen}>
-          Mudar geração
-        </Button>
+        <div className={styles.inputContainer}>
+          <Input
+            name="search"
+            text="Pesquisar"
+            value={search}
+            setValue={setSearch}
+          />
+          <Button variant="blackButtonText" onClick={handleOpen}>
+            Mudar geração
+          </Button>
+        </div>
         <Modal
           isOpen={isOpen}
           setIsOpen={setIsOpen}
@@ -127,11 +142,19 @@ export default function Home({ pokemons }) {
         <h2>{title}</h2>
       </div>
       <section className={styles.content}>
-        <div className={styles.contentContainer}>
-          {data.map((pokemon) => (
-            <Card key={pokemon.id} pokemon={pokemon} />
-          ))}
-        </div>
+        {search.length > 0 ? (
+          <div className={styles.contentContainer}>
+            {filteredData.map((pokemon) => (
+              <Card key={pokemon.id} pokemon={pokemon} />
+            ))}
+          </div>
+        ) : (
+          <div className={styles.contentContainer}>
+            {data.map((pokemon) => (
+              <Card key={pokemon.id} pokemon={pokemon} />
+            ))}
+          </div>
+        )}
       </section>
     </>
   );
