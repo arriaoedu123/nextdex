@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/poppins": "^4.5.9",
+    "@fontsource/press-start-2p": "^4.5.10",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-ripples": "^2.2.1",
-    "react-vanilla-tilt": "^1.0.0"
+    "react-ripples": "^2.2.1"
   },
   "devDependencies": {
     "eslint": "8.20.0",

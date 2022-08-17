@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "../components/Card";
 import Modal from "../components/Modal";
 import Button from "../components/Button";
@@ -7,10 +7,7 @@ import Input from "../components/Input";
 import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
-  const maxPokemons = 151;
-  const api = "https://pokeapi.co/api/v2/pokemon/";
-
-  const res = await fetch(`${api}/?limit=${maxPokemons}`);
+  const res = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=151");
   const data = await res.json();
 
   data.results.forEach((item, index) => {
@@ -41,7 +38,7 @@ export default function Home({ pokemons }) {
     "Oitava geração de Pokémon ( 810 - 905 )",
   ];
 
-  const fetchData = async (offset, limit, title) => {
+  const fetchData = async (offset, limit, settitle) => {
     const res = await fetch(
       `https://pokeapi.co/api/v2/pokemon/?limit=${limit}&offset=${offset}`
     );
@@ -51,12 +48,12 @@ export default function Home({ pokemons }) {
       item.id = index + (offset + 1);
     });
 
-    return setData(newData.results), setTitle(title), setIsOpen(false);
+    return setData(newData.results), setTitle(settile), setIsOpen(false);
   };
 
-  const handleClick = (event, a, b, c) => {
+  const handleClick = (event, offset, limit, settitle) => {
     event.preventDefault();
-    fetchData(a, b, c);
+    fetchData(offset, limit, settitle);
   };
 
   const handleOpen = (e) => {

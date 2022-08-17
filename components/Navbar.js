@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 
+import "@fontsource/press-start-2p";
 import styles from "../styles/Navbar.module.css";
 
 export default function Navbar() {

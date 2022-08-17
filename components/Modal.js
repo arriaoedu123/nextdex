@@ -9,42 +9,45 @@ export default function Modal({
   modalTitle,
   transparent,
   children,
-  ...props
 }) {
   useEffect(() => {
-    !props.scroll &&
-      (document.body.style.overflow = isOpen ? "hidden" : "auto");
-    return () => {
-      !props.scroll && (document.body.style.overflow = "auto");
-    };
+    document.body.style.overflowY = isOpen ? "hidden" : "auto";
   }, [isOpen]);
-
-  const handleClose = (e) => {
-    e.preventDefault();
-    setIsOpen(false);
-  };
 
   return !isOpen
     ? null
     : createPortal(
-        <div className={styles.modal} onClick={() => setIsOpen(false)}>
+        <div
+          className={styles.modal}
+          onClick={(e) => {
+            e.preventDefault();
+            setIsOpen(false);
+          }}
+        >
           <div
             className={
-              transparent ? styles.modalContentTransparent : styles.modalContent
+              transparent
+                ? styles.modalContainerTransparent
+                : styles.modalContainer
             }
             onClick={(e) => {
               e.stopPropagation();
             }}
           >
-            <button onClick={handleClose} className={styles.close}>
-              +
-            </button>
-            {!modalTitle ? null : (
-              <div className={styles.modalTitle}>
-                <h2>{modalTitle}</h2>
+            <div className={styles.modalHeader}>
+              {!modalTitle ? null : (
+                <h2>
+                  {modalTitle.charAt(0).toUpperCase() + modalTitle.slice(1)}
+                </h2>
+              )}
+              <div
+                className={styles.closeContainer}
+                onClick={() => setIsOpen(false)}
+              >
+                <span className={styles.close}>+</span>
               </div>
-            )}
-            {children}
+            </div>
+            <div className={styles.modalContent}>{children}</div>
           </div>
         </div>,
         document.body

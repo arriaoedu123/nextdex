@@ -40,22 +40,6 @@ export default function Button({
           </button>
         </Ripples>
       );
-    } else if (variant === "blackButton") {
-      return (
-        <Ripples
-          className={
-            className
-              ? `${styles.buttonRipple} ${className}`
-              : styles.buttonRipple
-          }
-          color="#ffffff40"
-          during={600}
-        >
-          <button className={styles.blackButton} onClick={onClick}>
-            {children}
-          </button>
-        </Ripples>
-      );
     } else if (variant === "blackButtonText") {
       return (
         <Ripples className={className}>
@@ -105,20 +89,6 @@ export default function Button({
         >
           <Link href={href}>
             <a className={styles.linkButton} onClick={onClick} target={target}>
-              {children}
-            </a>
-          </Link>
-        </Ripples>
-      );
-    } else if (variant === "linkButtonText") {
-      return (
-        <Ripples className={className}>
-          <Link href={href}>
-            <a
-              className={styles.linkButtonText}
-              onClick={onClick}
-              target={target}
-            >
               {children}
             </a>
           </Link>

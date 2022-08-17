@@ -43,8 +43,7 @@
 }
 
 .redButtonText,
-.blackButtonText,
-.linkButtonText {
+.blackButtonText {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,10 +70,6 @@
   color: #23232e;
 }
 
-.linkButtonText {
-  color: #17a2b8;
-}
-
 .redButtonText:hover,
 .blackButtonText:hover {
   transition: 0.25s;
@@ -86,8 +81,4 @@
 
 .blackButtonText:hover {
   background-color: #23232e40;
-}
-
-.linkButtonText:hover {
-  background-color: #17a2b840;
 }

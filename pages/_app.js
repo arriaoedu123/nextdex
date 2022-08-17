@@ -1,5 +1,7 @@
-import "../styles/globals.css";
 import Layout from "../components/Layout";
+
+import "@fontsource/poppins";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (

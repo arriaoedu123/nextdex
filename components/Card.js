@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Button from "../components/Button";
-import Tilt from "react-vanilla-tilt";
 
 import styles from "../styles/Card.module.css";
 
 export default function Card({ pokemon }) {
   return (
-    <Tilt className={styles.card}>
+    <div className={styles.card}>
       <Image
         src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
           .toString()
@@ -20,6 +19,6 @@ export default function Card({ pokemon }) {
       <Button variant="redLinkButtonText" href={`/pokemon/${pokemon.id}`}>
         Detalhes
       </Button>
-    </Tilt>
+    </div>
   );
 }

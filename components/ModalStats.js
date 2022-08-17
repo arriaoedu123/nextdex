@@ -4,10 +4,9 @@ import styles from "../styles/ModalStats.module.css";
 
 export default function ModalStats({ pokemon, isOpen, setIsOpen }) {
   return (
-    <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} modalTitle={pokemon.name}>
       <div className={styles.modalContent}>
         <div className={styles.statsContent}>
-          <h2>{pokemon.name}</h2>
           <div>
             <p>HP:</p>
             <p>{pokemon.stats[0].base_stat}</p>
