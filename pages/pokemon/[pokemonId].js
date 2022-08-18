@@ -65,7 +65,7 @@ export default function Pokemon({ pokemon }) {
       </Button>
       <h2 className={styles.name}>{pokemon.name}</h2>
       <Image
-        src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokemon.id
+        src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemon.id
           .toString()
           .padStart(3, "0")}.png`}
         width={200}

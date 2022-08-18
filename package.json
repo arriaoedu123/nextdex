@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/coda-caption": "^4.5.9",
     "@fontsource/poppins": "^4.5.9",
     "@fontsource/press-start-2p": "^4.5.10",
     "next": "12.2.3",

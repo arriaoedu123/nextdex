@@ -48,7 +48,12 @@ export default function Home({ pokemons }) {
       item.id = index + (offset + 1);
     });
 
-    return setData(newData.results), setTitle(settile), setIsOpen(false);
+    return (
+      setIsOpen(false),
+      setTitle(settitle),
+      setSearch(""),
+      setData(newData.results)
+    );
   };
 
   const handleClick = (event, offset, limit, settitle) => {

@@ -1,0 +1,72 @@
+.notFoundContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.errorContainer {
+  gap: 24px;
+}
+
+.fourOfour {
+  font-size: 5rem;
+  color: #cccccc;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fourOfour h2 {
+  font-family: "Coda Caption", sans-serif;
+  letter-spacing: -12px;
+}
+
+.pokeball {
+  width: 98px;
+  height: 98px;
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.description {
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.description h2 {
+  font-size: 3rem;
+}
+
+.description p {
+  color: #929192;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 525px) {
+  .errorContainer .image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .errorContainer .description {
+    margin-bottom: 0px;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+}

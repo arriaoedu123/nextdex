@@ -32,6 +32,11 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
+"@fontsource/coda-caption@^4.5.9":
+  "integrity" "sha512-E+vhfDzi2nTPZ2aF15YPVg5f7PSB8yhiCBHNlQKfUm1KdTxtZyqPAAGGCA0k4+utej2QEinXptrKUg+Ho18LCw=="
+  "resolved" "https://registry.npmjs.org/@fontsource/coda-caption/-/coda-caption-4.5.9.tgz"
+  "version" "4.5.9"
+
 "@fontsource/poppins@^4.5.9":
   "integrity" "sha512-PMHOYeUpdmdN1xk13aGvhvZZrv9Zt3ubx2PmDvnROHgefm0ixpFd3ogAi0fY/aWtlkUdvgt0mSkGGbtt5i4MsQ=="
   "resolved" "https://registry.npmjs.org/@fontsource/poppins/-/poppins-4.5.9.tgz"

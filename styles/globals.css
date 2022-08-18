@@ -8,6 +8,7 @@
 body {
   width: 100%;
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
 
 .mainContainer {
@@ -24,11 +25,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   background-color: #23232e;
 }
 
