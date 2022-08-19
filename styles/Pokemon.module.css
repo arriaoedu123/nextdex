@@ -14,7 +14,7 @@
 }
 
 .name {
-  font-size: 3rem;
+  font-size: 48px;
   background-color: #23232e;
   text-transform: capitalize;
   color: #fff;
@@ -146,25 +146,26 @@
   padding-left: 12px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
   .contentContainer {
-    height: auto;
     padding: 60px 20px 20px;
   }
+}
 
+@media only screen and (max-width: 576px) {
   .name {
-    font-size: 10vw;
+    font-size: 7.2vw;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .id h2,
+  .pokeInfos h2,
+  .dataContainer h2 {
+    font-size: 20px;
+  }
+
   .type {
     font-size: 16px;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .name {
-    font-size: 9vw;
   }
 }

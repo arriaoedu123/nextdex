@@ -32,13 +32,18 @@
 }
 
 .modalHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   height: 60px;
   background-color: #23232e;
   box-shadow: 0 2px 4px rgb(0 0 0 / 50%);
+}
+
+.modalTitle {
+  display: flex;
+  width: calc(100% - 60px);
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .modalHeader h2 {
@@ -93,13 +98,13 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .modalHeader {
+  .modalTitle {
     justify-content: left;
+    padding-left: 10px;
   }
 
-  .modalHeader h2 {
+  .modalTitle h2 {
     font-size: 20px;
-    padding-left: 10px;
   }
 }
 

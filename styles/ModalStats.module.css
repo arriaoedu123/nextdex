@@ -32,6 +32,10 @@
 
 @media only screen and (max-width: 400px) {
   .modalContent {
-    width: 90vw;
+    width: 83vw;
+  }
+
+  .statsContent {
+    width: 95%;
   }
 }

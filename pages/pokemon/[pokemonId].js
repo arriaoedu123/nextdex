@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Modal from "../../components/Modal";
 import ModalStats from "../../components/ModalStats";
 import Loading from "../../components/Loading";
@@ -86,7 +85,7 @@ export default function Pokemon({ pokemon }) {
           />
         </div>
       </Modal>
-      <div>
+      <div className={styles.id}>
         <h2>ID</h2>
         <p>#{pokemon.id}</p>
       </div>

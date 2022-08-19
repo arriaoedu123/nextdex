@@ -36,9 +36,11 @@ export default function Modal({
           >
             <div className={styles.modalHeader}>
               {!modalTitle ? null : (
-                <h2>
-                  {modalTitle.charAt(0).toUpperCase() + modalTitle.slice(1)}
-                </h2>
+                <div className={styles.modalTitle}>
+                  <h2>
+                    {modalTitle.charAt(0).toUpperCase() + modalTitle.slice(1)}
+                  </h2>
+                </div>
               )}
               <div
                 className={styles.closeContainer}
