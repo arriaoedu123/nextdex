@@ -8,11 +8,11 @@ import styles from "../styles/Navbar.module.css";
 
 const MENU_ITEMS = [
   {
-    name: "Home",
+    name: "Início",
     href: "/",
   },
   {
-    name: "About",
+    name: "Sobre",
     href: "/about",
   },
 ];
@@ -75,14 +75,14 @@ export default function Navbar() {
               <Link href={item.href}>
                 <a>{item.name}</a>
               </Link>
+              <span
+                className={
+                  router.pathname === `${item.href}`
+                    ? styles.navActive
+                    : styles.navDisabled
+                }
+              ></span>
             </div>
-            <span
-              className={
-                router.pathname === `${item.href}`
-                  ? styles.navActive
-                  : styles.navDisabled
-              }
-            ></span>
           </li>
         ))}
       </ul>

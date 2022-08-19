@@ -3,6 +3,8 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -48,19 +50,4 @@ a {
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
-}
-
-a {
-  color: inherit;
-}
-
-.react-ripples {
-  border-radius: 4px;
-}
-
-@media only screen and (max-width: 375px) {
-  .blackButton,
-  .redButton {
-    font-size: 16px;
-  }
 }

@@ -89,7 +89,7 @@
 }
 
 .modalContent {
-  padding: 18px;
+  padding: 30px 18px 18px;
 }
 
 @media only screen and (max-width: 375px) {

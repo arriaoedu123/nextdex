@@ -20,12 +20,9 @@ export default function About() {
         </a>
         .
       </p>
-      <Image
-        src="/images/charizard.png"
-        width={300}
-        height={300}
-        alt="Charizard"
-      />
+      <div className={styles.image}>
+        <Image src="/images/charizard.png" layout="fill" alt="Charizard" />
+      </div>
     </div>
   );
 }

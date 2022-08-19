@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 20px;
 }
 
 .about p {
@@ -20,4 +20,27 @@
 
 .about p a:hover {
   color: #0a58ca;
+}
+
+.image {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 525px) {
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  .about p,
+  .about p a {
+    font-size: 14px;
+  }
+
+  .image {
+    width: 250px;
+    height: 250px;
+  }
 }
