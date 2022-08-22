@@ -143,7 +143,7 @@ export default function Home({ pokemons }) {
         </Modal>
         <h2>{title}</h2>
       </div>
-      <section className={styles.content}>
+      <div className={styles.content}>
         {search.length > 0 ? (
           <div className={styles.contentContainer}>
             {filteredData.map((pokemon) => (
@@ -157,7 +157,7 @@ export default function Home({ pokemons }) {
             ))}
           </div>
         )}
-      </section>
+      </div>
     </>
   );
 }

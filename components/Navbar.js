@@ -40,23 +40,21 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <ul>
-        <Link href="/">
-          <a className={styles.logoLink}>
-            <li className={styles.logo}>
+        <li className={styles.logo}>
+          <Link href="/">
+            <a className={styles.logoLink}>
               <Image
                 src="/images/pokeball.svg"
                 width={32}
                 height={32}
                 alt="NextDex"
               />
-            </li>
-            <li className={styles.logoName}>
-              <h1>
+              <h1 className={styles.logoName}>
                 Next<span>Dex</span>
               </h1>
-            </li>
-          </a>
-        </Link>
+            </a>
+          </Link>
+        </li>
       </ul>
       <div className={styles.menuButton} onClick={handleNav}>
         <span

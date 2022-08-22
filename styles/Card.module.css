@@ -33,7 +33,6 @@
 
 .name {
   font-size: 19px;
-  font-weight: medium;
   letter-spacing: 0.15px;
   color: #fff;
   text-transform: capitalize;
@@ -45,12 +44,20 @@
     transform: none;
     box-shadow: none;
   }
+
+  .id {
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 445px) {
   .card {
-    width: 45vw !important;
-    height: 270px !important;
+    width: 45vw;
+    height: 270px;
   }
 }
 
@@ -62,7 +69,7 @@
 
 @media only screen and (max-width: 375px) {
   .card {
-    height: 255px !important;
+    height: 255px;
     gap: 6px;
   }
 }

@@ -18,20 +18,24 @@
   color: #fff;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logoLink {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
-.logo {
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-.logoName h1,
+.logoName,
 .logoName span {
   font-family: "Press Start 2P", sans-serif;
+}
+
+.logoName {
+  color: #fff;
 }
 
 .logoName span {
